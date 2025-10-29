@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    min-width: 250px;
+}
+
+.card-bg {
+    background-color: rgb(44, 93, 190);
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid rgb(44, 93, 190);
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+    object-fit: cover;
+}
+
+.social-media-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.facebook {
+    background-color: blue;
+}
+
+.twitter {
+    background-color: lightblue;
+}
+
+.instagram {
+    background-color: pink;
+}
+
+.youtube {
+    background-color: red;
+}
+
+.actions-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: rgb(44, 93, 190);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: white;
+}
+
+.stats-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stat-item {
+    box-sizing: content-box;
+}
+
+.stat-item:nth-of-type(2) {
+    padding: 0 20px 0 20px;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+@media (max-width: 900px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img {
+        content: url("./profile2.jpg");
+    }
+}
+
+
+
+@media (max-width: 660px) {
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    img {
+        content: url("./profile3.webp");
+    }
+}
+
+@media (max-width: 500px) {
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    img {
+        content: url("./profile4.jpg");
+    }
+}
